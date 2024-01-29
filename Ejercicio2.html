@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var inicio=["unacadena",3,9,1,10,500,1,10,true];
+        //console.log(inicio);
+        var numElementos;
+        var inicio=[];
+        var vector1=[];
+        var otrovector=[];
+
+        var numElementos=window.prompt("Ingrese el numero de elementos del arreglo");
+        var elemento=0;
+        var aux;
+        while (elemento < numElementos){
+            let contador=elemento +1;      
+            valor=(window.prompt("Ingrese el valor número "+ contador ));
+            valor1=parseInt(valor);
+            if (!isNaN(valor1) && Number.isInteger(valor1)){
+               inicio[elemento]=valor1;
+            }   
+            else{   
+            
+             inicio[elemento]=valor;}
+            elemento++;
+        }
+        //console.log(inicio);
+        
+ 
+      //recorrido del arreglo inicio y arma el arreglo vector1 solo de numeros
+       var j=0;
+       for(let i=0;i<inicio.length;i++){
+                              
+        if (Number.isInteger(inicio[i])){
+            
+            vector1[j]=inicio[i];
+            j++;
+                    
+       }}
+       console.log(vector1);
+
+    //Algoritmo de ordenacion del arreglo de números
+    var bandera=false;
+    for(let i=0;i<vector1.length;i++){
+        for(let j=0;j<vector1.length-1;j++){
+        
+        //ordenado de mayor a menor
+        if (vector1[j]<vector1[j+1]){
+            let num1 = vector1[j];
+            let num2 = vector1[j+1];
+            vector1[j]=num2;
+            vector1[j+1]=num1;
+            bandera=true;
+        }
+
+        }    
+        }
+        //console.log("El arreglo ordenado es: " + vector1);
+        alert("El arreglo ordenado es: "  + vector1);
+    
+   </script>
+</body>
+</html>

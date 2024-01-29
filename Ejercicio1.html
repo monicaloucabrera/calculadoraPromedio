@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERIE FIBONACCI</title>
+
+</head>
+<body>
+    <script>
+        var numeroDeElementos=window.prompt("Ingrese el numero de resultados de la serie de Fibonacci");
+
+        const vectorFibonaci =[0,1];
+        for (let i=2;i<=numeroDeElementos;i++){
+
+            vectorFibonaci.push(vectorFibonaci[i-1] + vectorFibonaci[i-2]);
+        }
+        console.log("El resultado es " + vectorFibonaci);
+
+    </script>
+    
+</body>
+</html>
